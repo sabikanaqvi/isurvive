@@ -1,0 +1,33 @@
+<!--
+  Generated template for the Health page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Health</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <sebm-google-map [latitude]="28.2180" [longitude]="94.7278">
+         
+          <sebm-google-map-kml-layer url="http://dl.dropboxusercontent.com/s/57mo8nkj6cz5h5e/tawang.kml?dl=0" [clickable]='true' [suppressInfoWindows]='true' >
+            <sebm-google-map-marker *ngFor="let hospital of hospitals" (markerClick)="onClickMarker(hospital)" [latitude]="hospital.GEOMETRY.y" [longitude]="hospital.GEOMETRY.x">
+             </sebm-google-map-marker>
+          </sebm-google-map-kml-layer> 
+     
+          
+        </sebm-google-map>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

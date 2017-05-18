@@ -1,0 +1,22 @@
+<ion-menu [content]="nav">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title> Menu </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="onLoad(healthPage)">
+                <ion-icon name="heart" item-left> </ion-icon>
+                Health
+             </button>
+       </ion-list>
+    <ion-list>
+               <button ion-item (click)="onLoad(peoplePage)">
+                <ion-icon name="man" item-left> </ion-icon>
+                People
+             </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+    <ion-nav [root]="rootPage" #nav></ion-nav>

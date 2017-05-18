@@ -1,0 +1,38 @@
+<!--
+  Generated template for the LogIn page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>LogIn</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form action="/action_page.php">
+   
+
+    <div class="container">
+      <ion-label><b>Username</b></ion-label>
+      <input type="text" placeholder="Enter Username" name="sabika" required>
+
+      <ion-label><b>Password</b></ion-label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit" (click)="onLogin()">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+     <button type="submit" (click)="onCancel()">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+
+</ion-content>

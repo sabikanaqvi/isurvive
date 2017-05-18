@@ -1,0 +1,58 @@
+page-home {
+
+
+.scroll-content{
+    background: url("https://emilysuhr.files.wordpress.com/2011/04/5213030389_fa4647b073_o.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    
+    height: 100vh;
+    align-content:center;
+
+}
+ .intro {
+    font-family:'Times New Roman', Times, serif; font-size: 70px ;color:white; position:relative;
+ }
+
+ .title{
+     text-align: center;
+ }
+ 
+  
+   .login {
+    opacity: 0.5;
+    background-color:black; 
+    color: white;
+    font-size: 15px ;
+    position: relative;
+     padding: 20px 34px;
+      margin: 12px auto;
+     
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     } 
+
+     .signup {
+    opacity: 0.5;
+    background-color:black; 
+    color: white ;
+    font-size: 15px ;
+    position: relative;
+     padding: 20px 34px;
+      margin: 12px auto;
+     
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+     } 
+
+
+
+.container {
+    padding: 16px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+
+
+
+}
