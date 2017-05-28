@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,MenuController } from 'ionic-angular';
 import { Health } from '../../providers/health';
 import{HinfoPage} from '../hinfo/hinfo';
 import 'rxjs/Rx';
@@ -19,7 +19,8 @@ import {HealthModel} from '../../models/health';
 
 export class HealthPage implements OnInit {
   hospitals: HealthModel [] = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public health: Health) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public health: Health ,
+  private menuCtrl:MenuController) {}
 
   ngOnInit(){
     this.health.getAllHospital().subscribe(
@@ -31,6 +32,10 @@ export class HealthPage implements OnInit {
       }
     );
   }
+
+  onOpenMenu(){
+  this.menuCtrl.open();
+}
 
   onClickMarker(hospital: any){
     this.navCtrl.push(HinfoPage, {hospital: hospital});

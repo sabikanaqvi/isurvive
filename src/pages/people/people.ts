@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 import {Health} from '../../providers/health';
 import{PinfoPage} from '../pinfo/pinfo';
 import 'rxjs/Rx';
@@ -18,7 +18,7 @@ import {PeopleModel} from '../../models/people';
 export class PeoplePage implements OnInit {
 
   people: PeopleModel[] = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams, public health: Health) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public health: Health, private menuCtrl: MenuController) {}
 
 
 
@@ -32,6 +32,10 @@ export class PeoplePage implements OnInit {
       }
     );
   }
+
+  onOpenMenu(){
+  this.menuCtrl.open();
+}
 
    onClickMarker(peep: any){
     this.navCtrl.push(PinfoPage, {peep: peep});
